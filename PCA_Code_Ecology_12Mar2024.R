@@ -336,7 +336,7 @@ anova(Wolpi.glm, test = "F")
 #*Correlation Matrix ####
 
 #####Biweekly Irrad Measurements#######
-IR1.2 <- read.csv("Biweekly_LightFinal.csv")
+IR1.2 <- read.csv("Biweekly_Light.csv")
 IR1.2$Survey.ID <-str_sub(IR1.2$folder.names,19,-7)
 IR1.2$Date <-str_sub(IR1.2$folder.names,19,27)
 IR1.2$Irr.ID <-str_sub(IR1.2$folder.names,-1,-1)
@@ -365,7 +365,7 @@ IR.cp[!duplicated(IR.cp), ]
 
 ###########Count & Weather Data######
 
-bi <- read.csv("~/Biweekly_Count_Weather_Final.csv")
+bi <- read.csv("~/Biweekly_Count_Weather.csv")
 
 bi$Survey.ID<-paste(bi$Date, bi$Site, sep = " ")
 
@@ -625,7 +625,7 @@ bi.combo<-left_join(bi.beh,bi.PCs, by=c("Year","Site","Family","Week"))
 summary(bi.combo$Behavior.Processed)
 bi.combo$Behavior.Processed<-as.factor(bi.combo$Behavior.Processed)
 
-#File for JMP: "beh_for_JMP_May15.csv"
+#File for JMP: "Behavior_JMP.csv"
 melt.beh <- melt(bi.combo, id.vars = c("Site", "Year", "Week", "Survey.ID","Behavior.Processed","Family"),
                  measure.vars = c("biPC1", "biPC2", "biPC3", "biPC4"))
 
