@@ -1,4 +1,4 @@
-# Community_Paper_2023
+# Community_Paper_2024
 #These two files contain code used for the paper "One size does not fit all: Family specific differences in seasonal patterns of abundance and behavior in butterfly communities"
 #"Annotated PCA" contains the code needed to conduct the analysis
 #Run this code in R.4.2.4
